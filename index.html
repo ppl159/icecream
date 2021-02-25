@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>나뚜루</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+
+    <!--파비콘-->
+    <link href="img/favicon.png" type="image" rel="shortcuticon">
+    <!--외부 css-->
+    <link href="css/jquery.bxslider.css" type="text/css" rel="stylesheet">
+    
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/jquery.bxslider.min.js"></script>
+    <script>
+    $(document).ready(function(){
+    $('.slider').bxSlider({
+        auto:true
+    });
+        
+    $('.bx-wrapper .bx-controls-direction a').click(function(){
+        $(this).addClass('active');
+    });
+        
+    $('.bx-wrapper .bx-controls-direction a').mouseleave(function(){
+        $(this).removeClass('active');
+    });    
+        
+    });
+    
+    $(document).ready(function(){
+        //주메뉴에 마우스 올리면 서브메뉴 내려옴
+        //stop() 메서드 : 메모리 스택(stack)에 저장된 제이쿼리 명령어를 삭제
+        $('nav > ul > li').hover(function(){
+            $('.sub').stop().fadeIn();
+            $('.sub_bg').stop().fadeIn();
+            
+        },function(){
+            $('.sub').stop().fadeOut();
+            $('.sub_bg').stop().fadeOut();
+        });
+    });
+        
+    </script> 
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="box_center">
+                <div class="h_sns">
+                    <ul>
+                        <li>
+                           <a href="http://www.twitter.com">
+                              <img src="img/twitter.png" alt="트위터">
+                           </a>
+                        </li>
+                        <li>
+                           <a href="http://www.instagram.com">
+                              <img src="img/insta.png" alt="인스타그램">
+                           </a>
+                        </li>
+                        <li>
+                           <a href="http://www.facebook.com">
+                              <img src="img/facebook.png" alt="페이스북">
+                           </a>
+                        </li>
+                        <li>
+                           <a href="https://www.pinterest.com">
+                              <img src="img/blog.png" alt="블로그">
+                           </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="logo">
+                    <a href="index.html"><!--로고를 클릭하면 메인페이지로 돌아감-->
+                        <img src="img/logo3.png" alt="로고">
+                    </a>
+                </div>
+                <div class="custom">
+                    <ul>
+                        <li>
+                            <a href="#">고객센터</a>
+                        </li>
+                        <li>
+                            <a href="#">CONTACT US</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/searchicon.png" alt="검색">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!--내비게이션-->
+            <div class="navi">
+               <div class="navi_in">
+                  <div class="navi_left">
+                    <ul>
+                        <li>
+                            <a href="#">LOGIN</a>
+                        </li>
+                         <li>
+                            <a href="#">JOIN</a>
+                        </li>
+                    </ul>
+                  </div>
+                
+                <nav>
+                    <ul>
+                        <li>
+                           <!--주메뉴-->
+                            <a href="menu.html">나뚜루</a>
+                            <!--서브메뉴-->
+                            <ul class="sub">
+                                <li>
+                                    <a href="#">나뚜루 소개</a>
+                                </li>
+                                <li>
+                                    <a href="#">광고 이야기</a>
+                                </li>
+                                <li>
+                                    <a href="#">나뚜루 뉴스</a>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                           <!--주메뉴-->
+                            <a href="#">플래그십</a>
+                            <!--서브메뉴-->
+                            <ul class="sub">
+                                <li>
+                                    <a href="#">Store</a>
+                                </li>
+                                <li>
+                                    <a href="#">Menu</a>
+                                </li>
+                                <li>
+                                    <a href="#">매장위치</a>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                           <!--주메뉴-->
+                            <a href="#">메뉴</a>
+                            <!--서브메뉴-->
+                            <ul class="sub">
+                                <li>
+                                    <a href="#">신제품/인기제품</a>
+                                </li>
+                                <li>
+                                    <a href="#">완제품</a>
+                                </li>
+                                <li>
+                                    <a href="#">전문점 제품</a>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                           <!--주메뉴-->
+                            <a href="#">매장</a>
+                            <!--서브메뉴-->
+                            <ul class="sub">
+                                <li>
+                                    <a href="#">매장찾기</a>
+                                </li>
+                                <li>
+                                    <a href="#">가맹점 모집</a>
+                                </li>
+                                <li>
+                                    <a href="#">홈배달 서비스</a>
+                                </li>
+                                <li>
+                                    <a href="#">푸드트럭</a>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                           <!--주메뉴-->
+                            <a href="#">이벤트</a>
+                            <!--서브메뉴-->
+                            <ul class="sub">
+                                <li>
+                                    <a href="#">진행중인 이벤트</a>
+                                </li>
+                                <li>
+                                    <a href="#">지난 이벤트</a>
+                                </li>
+                                <li>
+                                    <a href="#">당첨자 발표</a>
+                                </li>
+                                <li>
+                                    <a href="#">그룹 옴니채널</a>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                           <!--주메뉴-->
+                            <a href="#">SNS</a>
+                        </li>
+                    </ul>
+                </nav>
+                </div><!--navi_in end-->
+                
+                <!--서브메뉴배경-->
+                <div class="sub_bg">
+                    <img src="img/sub_bg.png" alt="아이스크림콘">
+                </div>
+             </div><!--navi-->
+        </header>
+        
+        <section class="slide slider">
+                <div>
+                    <a href="#">
+                        <img src="img/slide3.png" alt="크로와플">
+                    </a>
+                </div>
+                
+                <div>
+                    <a href="#">
+                        <img src="img/slide2.png" alt="트리플컵1+1">
+                    </a>
+                </div>
+                
+                <div>
+                    <a href="#">
+                        <img src="img/slide1.png" alt="비건아이스크림">
+                    </a>
+               </div>
+       
+        </section>
+        
+        <section class="event">
+            <div class="box_center">
+                <h1>EVENT</h1>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="img/lpay.png" alt="엘포인트">
+                            <div class="des">
+                                <h3><img src="img/storeicon.png" alt="아이콘">
+                                <span>ONLINE EVENT</span>
+                                </h3>
+                                <p>엘페이로 간편하게 결제하세요!</p>
+                                <span>상시진행</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/deliveypeople.png" alt="배민">
+                            <div class="des">
+                                <h3><img src="img/storeicon.png" alt="아이콘">
+                                <span>STORE EVENT</span>
+                                </h3>
+                                <p>배달의 민족에서 빠르게 주문하세요!</p>
+                                <span>상시진행</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/yogiyo.png" alt="요기요">
+                            <div class="des">
+                                <h3><img src="img/storeicon.png" alt="아이콘">
+                                <span>STORE EVENT</span>
+                                </h3>
+                                <p>요기요에서 손쉽게 주문하세요!</p>
+                                <span>상시진행</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/kakao.png" alt="카카오톡">
+                            <div class="des">
+                                <h3><img src="img/storeicon.png" alt="아이콘">
+                                <span>STORE EVENT</span>
+                                </h3>
+                                <p>카카오톡 주문하기에서 편리하게 주문하세요!</p>
+                                <span>상시진행</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        
+        <section class="menu">
+            <div class="box_center">
+                <h1>MENU</h1>
+                <div class="menu_in">
+                    <div class="m1">
+                        <img src="img/icecreamcorn.png" alt="아이스크림">
+                        <div class="menu_txt">
+                            <h3>Ice cream</h3>
+                            <p>자연을 담은 아이스크림<br>나뚜루</p>
+                            <a href="#">
+                               <img src="img/arrowmini.png" alt="rightarrow">
+                               <span>more</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="m2">                        
+                        <div class="menu_txt">
+                            <h3>Coffee</h3>
+                            <p>신선한 원두를 로스팅한<br>나뚜루만의 풍미 가득한 커피</p>
+                            <a href="#">
+                               <img src="img/arrowmini.png" alt="rightarrow">
+                               <span>more</span>
+                            </a>
+                        </div>
+                        <img src="img/cofee.png" alt="커피">
+                    </div>
+                    
+                    <div class="m3">
+                        <img src="img/tiramisu.png" alt="케이크">
+                        <div class="menu_txt">
+                            <h3>Ice cream cake</h3>
+                            <p>온가족이 즐기는<br>아이스크림 케이크</p>
+                            <a href="#">
+                               <img src="img/arrowmini.png" alt="rightarrow">
+                               <span>more</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="m4">
+                        <div class="menu_txt">
+                            <h3>Beverage</h3>
+                            <p>달콤하고 상큼한<br>다양한 맛의 음료</p>
+                            <a href="#">
+                               <img src="img/arrowmini.png" alt="rightarrow">
+                               <span>more</span>
+                            </a>
+                        </div>
+                        <img src="img/beverage.png" alt="음료">
+                    </div>
+                    
+                    <div class="m5">
+                        <div class="menu_txt">
+                            <h3>Desert</h3>
+                            <p>더욱 간편하게 즐기는<br>디저트 아이스크림</p>
+                            <a href="#">
+                               <img src="img/arrowmini.png" alt="rightarrow">
+                               <span>more</span>
+                            </a>
+                        </div>
+                        <img src="img/desert.png" alt="디저트">
+                    </div>
+                </div>    
+            </div>
+        </section>
+        
+        <section class="store">
+            <div class="box_center">
+                <div class="search_store">
+                    <h1>STORE</h1>
+                    <img src="img/storepic.png" alt="매장찾기">
+                </div>
+                <div class="delivery">
+                    <h1>DELIVERY</h1>
+                    <img src="img/deliverypic.png" alt="주문 및 배달">
+                </div>
+            </div>
+        </section>
+        
+        <section class="sns">
+            <div class="box_center">
+               <h1>SNS</h1>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="img/twitter.png" alt="twitter">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/insta.png" alt="instagram">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/facebook.png" alt="facebook">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/blog.png" alt="pinterest">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        
+        <section class="insta">
+            <div class="box_center">
+                <h1>NATUUR INSTAGRAM</h1>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="img/instapic1.png" alt="insta">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/instapic2.png" alt="insta">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/instapic3.png" alt="insta">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/instapic4.png" alt="insta">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/instapic5.png" alt="insta">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/instapic6.png" alt="insta">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/instapic7.png" alt="insta">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/instapic8.png" alt="insta">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/instapic9.png" alt="insta">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/instapic10.png" alt="insta">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <footer>
+            <div class="box_center">
+                <div class="info">
+                    <ul>
+                        <li>
+                            <a href="#">점포개설문의</a>
+                        </li>
+                        <li>
+                            <a href="#">채용문의</a>
+                        </li>
+                        <li>
+                            <a href="#">온라인신고센터</a>
+                        </li>
+                        <li>
+                            <a href="#">이용약관</a>
+                        </li>
+                        <li>
+                            <a href="#">개인정보처리방침</a>
+                        </li>
+                        <li>
+                            <a href="#">영상정보처리기기운영관리방침</a>
+                        </li>
+                        <li>
+                            <a href="#">거래희망회사 사전등록</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="f_logo">
+                    <img src="img/logo.png" alt="로고">
+                </div>
+                <address>
+                   사업자등록번호:333-21-98654 롯데제과(주) 대표이사:김용인 서울특별시 영등포구 양평로 21길 10<br>TEL:070-777-7070 개인정보관리책임자:최영신
+                </address>
+                <p>Copyrightⓒ2016LOTTE Company.All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
